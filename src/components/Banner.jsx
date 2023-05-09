@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Banner() {
+function Banner({ title, backgroundImage }) {
     return (
-        <div>
-            <h1>Chez vous, partout et ailleurs</h1>
+        <div className="banner-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <h1 className="banner-title">{title}</h1>
         </div>
     );
 }

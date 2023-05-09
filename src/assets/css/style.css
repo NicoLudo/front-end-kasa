@@ -1,0 +1,191 @@
+body {
+  margin: 0px;
+}
+
+.main-container {
+  margin: auto;
+  max-width: 90%;
+  min-width: 85%;
+}
+
+/* Start page 404 codes */
+
+.page404-title {
+  font-size: 10rem;
+  text-align: center;
+  color: #FF6060;
+  margin-bottom: 0px;
+}
+
+.page404-content {
+  font-size: 2rem;
+  text-align: center;
+  color: #FF6060;
+}
+
+.page404-link {
+  text-align: center;
+}
+
+.page404-link a {
+  color: #FF6060;
+}
+
+/* End page 404 codes */
+
+/* Start collapse codes */
+
+.collapse-container {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.collapse-title {
+  position: relative;
+  background-color: #FF6060;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.collapse-title::after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ffffff;
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.collapse-title[data-open='true']::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.collapse-content {
+  background-color: #F6F6F6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  position: relative;
+  bottom: 10px;
+  z-index: -1;
+}
+
+.collapse-content--open {
+  max-height: 500px;
+}
+
+/* End collapse codes */
+
+/* Start banner codes */
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1.5rem;
+  margin: 2rem 0px 2rem 0px;
+}
+
+.banner-title {
+  color: #ffffff;
+  font-size: 3em;
+}
+
+/* End banner codes */
+
+/* Start cards codes */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F6F6F6;
+  padding: 3rem;
+  border-radius: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(33.3333% - 2rem);
+  margin: 1rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    width: calc(50% - 2rem);
+  }
+
+}
+
+@media (max-width: 570px) {
+  .card-container {
+    width: calc(100% - 2rem);
+  }
+}
+
+.card-inner {
+  position: relative;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.card-title {
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+}
+
+.card-title-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4747477a;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0rem 0rem 1.5rem 1.5rem;
+}
+
+/* ---------------------------- NOTES ---------------------------- */
+/* 1. Forcer la height des cards, et peu importe la taille, ne PAS baisser, n'y augmenter la height */
+/* 2. Ajouter encore un peu plus de padding aux titres (se referer à la maquette kasa) */
+
+/* End cards codes */
+
+/* Start footer codes */
+
+.footer {
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* End footer codes */
