@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import Banner from './Banner';
 import cardData from '../routes.json';
-import bannerBackground from '../assets/images/home-banner.jpg';
+import bannerBackground from '../assets/images/home-banner.png';
 
 function Home() {
     return (

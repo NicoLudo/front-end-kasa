@@ -1,3 +1,7 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   margin: 0px;
 }
@@ -7,6 +11,40 @@ body {
   max-width: 90%;
   min-width: 85%;
 }
+
+/* Start navbar codes */
+
+nav ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.logo img {
+  height: 2.5rem;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #FF6060;
+}
+
+.nav-items li a.active {
+  text-decoration: underline;
+  color: #FF6060;
+}
+
+/* End navbar codes */
 
 /* Start page 404 codes */
 
@@ -55,11 +93,7 @@ body {
   width: 100%;
 }
 
-.collapse-title::after {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #ffffff;
-  content: '';
+.collapse-arrow {
   position: absolute;
   right: 15px;
   top: 50%;
@@ -67,7 +101,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.collapse-title[data-open='true']::after {
+.collapse-arrow--open {
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -105,7 +139,8 @@ body {
 
 .banner-title {
   color: #ffffff;
-  font-size: 3em;
+  font-size: 2.5rem;
+  padding: 1rem;
 }
 
 /* End banner codes */
@@ -173,19 +208,27 @@ body {
 }
 
 /* ---------------------------- NOTES ---------------------------- */
-/* 1. Forcer la height des cards, et peu importe la taille, ne PAS baisser, n'y augmenter la height */
-/* 2. Ajouter encore un peu plus de padding aux titres (se referer à la maquette kasa) */
+/* 1. Forcer la hauteur des cards, et peu importe la taille, ne pas baisser ni augmenter la hauteur */
+/* 2. Ajouter encore un peu plus d'espacement aux titres (Se référer à la maquette Kasa) */
 
 /* End cards codes */
 
 /* Start footer codes */
 
-.footer {
+footer {
   padding: 1.5rem;
   margin-top: 1.5rem;
   background-color: #000000;
   color: #ffffff;
   text-align: center;
+}
+
+footer p {
+  margin: 1rem 0rem 0rem 0rem;
+}
+
+.footer-logo {
+  height: 1.5rem;
 }
 
 /* End footer codes */

@@ -1,28 +1,32 @@
 import './assets/css/style.css';
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 
 import Home from './components/Home';
 import About from './components/About';
 import Footer from './components/Footer';
 import Page404 from './components/Page404';
 
+import logo from './assets/images/logo.png';
+
 function App() {
   return (
     <Router>
       <div className="main-container">
         <nav>
-          <ul>
+          <div className="logo">
+            <img src={logo} alt="Logo Kasa" />
+          </div>
+          <ul className="nav-items">
             <li>
-              <Link to="/">Accueil</Link>
+              <NavLink to="/" activeClassName="active" end>
+                Accueil
+              </NavLink>
             </li>
             <li>
-              <Link to="/About">À propos</Link>
+              <NavLink to="/About" activeClassName="active">
+                À propos
+              </NavLink>
             </li>
           </ul>
         </nav>
