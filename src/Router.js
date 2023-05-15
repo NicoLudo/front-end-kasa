@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-do
 import Home from './components/Home';
 import About from './components/About';
 import Page404 from './components/Page404';
+import Product from './components/Product';
 
 import logo from './assets/images/logo.png';
 
@@ -16,12 +17,12 @@ function TheRouter() {
                 </div>
                 <ul className="nav-items">
                     <li>
-                        <NavLink to="/" activeClassName="active" end>
+                        <NavLink to="/" activeclassname="active" end>
                             Accueil
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/About" activeClassName="active">
+                        <NavLink to="/About" activeclassname="active">
                             À propos
                         </NavLink>
                     </li>
@@ -29,8 +30,9 @@ function TheRouter() {
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/About" element={<About />} />
+                <Route path="/about" element={<About />} />
                 <Route path="*" element={<Page404 />} />
+                <Route path="/product/:id" element={<Product />} />
             </Routes>
         </Router>
     );

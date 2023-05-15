@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import Banner from './Banner';
-import cardData from '../routes.json';
+import cardData from '../logement.json';
 import bannerBackground from '../assets/images/home-banner.png';
 
 function Home() {
