@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from './Card';
-import Banner from './Banner';
+import Card from '../components/Card';
+import Banner from '../components/Banner';
 import cardData from '../logement.json';
 import bannerBackground from '../assets/images/home-banner.png';
 

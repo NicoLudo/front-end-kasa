@@ -3,7 +3,7 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
 }
 
 .main-container {
@@ -53,7 +53,7 @@ nav {
   font-size: 10rem;
   text-align: center;
   color: #FF6060;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .page404-content {
@@ -79,7 +79,8 @@ nav {
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .collapse-title {
@@ -128,6 +129,7 @@ nav {
 /* Start banner codes */
 
 .banner-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,19 +140,21 @@ nav {
   margin: 0rem 0px 2rem 0px;
 }
 
-/* .banner-container:after {
-  content: '';
+.banner-container::before {
+  content: "";
   position: absolute;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 212, 255, 0) 50%);
-  height: 100%;
   width: 100%;
-  bottom: 0;
-} */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: inherit;
+  z-index: 1;
+}
 
 .banner-title {
   color: #ffffff;
   font-size: 2.5rem;
   padding: 1rem;
+  z-index: 2;
 }
 
 /* End banner codes */
@@ -257,6 +261,86 @@ nav {
   padding: 10px;
 }
 
+.product-title {
+  color: #FF6060;
+  margin-bottom: 0;
+}
+
+.product-location {
+  color: #FF6060;
+  margin: 5px 5px 0px 0px;
+}
+
+.product-host-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+}
+
+.host-info {
+  display: flex;
+  align-items: center;
+  max-width: 10rem;
+  text-align: right;
+  gap: 10px;
+}
+
+.host-name {
+  color: #FF6060;
+}
+
+.host-picture {
+  width: 5rem;
+  border-radius: 100%;
+}
+
+.product-rating-tags {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+  gap: 20px;
+}
+
+.product-equipments {
+  list-style-type: none;
+  padding-left: 0;
+  color: #FF6060;
+}
+
+.product-description-equipements {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.product-description {
+  color: #FF6060;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.product-tag {
+  color: #ffffff;
+  background-color: #FF6060;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+  font-size: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.product-rating {
+  display: flex;
+  gap: 10px;
+}
+
+.rating-stars {
+  object-fit: contain;
+}
 
 /* End product page codes */
 

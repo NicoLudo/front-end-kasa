@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 
-import Home from './components/Home';
-import About from './components/About';
-import Page404 from './components/Page404';
-import Product from './components/Product';
+import Home from './pages/Home';
+import About from './pages/About';
+import Page404 from './pages/Page404';
+import Product from './pages/Product';
 
 import logo from './assets/images/logo.png';
 
