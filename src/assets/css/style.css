@@ -109,11 +109,11 @@ nav {
 
 .collapse-content {
   background-color: #F6F6F6;
+  color: #FF6060;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  padding-left: 10px;
-  padding-top: 10px;
+  padding: 10px 10px 0px 10px;
   border-radius: 0rem 0rem 0.5rem 0.5rem;
   position: relative;
   bottom: 10px;
@@ -186,7 +186,6 @@ nav {
   position: relative;
   height: 300px;
   border-radius: 1.5rem;
-  ;
   overflow: hidden;
 }
 
@@ -263,6 +262,7 @@ nav {
 
 .product-title {
   color: #FF6060;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -271,10 +271,20 @@ nav {
   margin: 5px 5px 0px 0px;
 }
 
-.product-host-info {
+.host-rating-tags-info {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   margin-top: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.host-rating,
+.tags-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .host-info {
@@ -294,27 +304,16 @@ nav {
   border-radius: 100%;
 }
 
-.product-rating-tags {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.6rem;
-  gap: 20px;
-}
-
 .product-equipments {
   list-style-type: none;
   padding-left: 0;
-  color: #FF6060;
 }
 
 .product-description-equipements {
   display: flex;
   justify-content: space-between;
   gap: 50px;
-}
-
-.product-description {
-  color: #FF6060;
+  margin-top: 0.6rem;
 }
 
 .product-tags {
@@ -322,6 +321,7 @@ nav {
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  margin: 0;
   gap: 10px;
 }
 
@@ -343,6 +343,70 @@ nav {
 }
 
 /* End product page codes */
+
+/* Start media queries */
+
+@media (max-width: 425px) {
+
+  /* Start cards codes */
+
+  .cards-container {
+    padding: 3rem 1rem;
+  }
+
+  /* End cards codes */
+
+  /* Start collapse codes */
+
+  .collapse-container {
+    width: 100%;
+  }
+
+  /* End collapse codes */
+
+  /* Start product page codes */
+
+  .host-rating-tags-info {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .tags-info {
+    gap: 15px;
+  }
+
+  .host-rating {
+    margin-top: 0.6rem;
+    flex-direction: row-reverse;
+    gap: inherit;
+    justify-content: space-between;
+  }
+
+  .product-description-equipements {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .product-host-info-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* End product page codes */
+
+}
+
+@media (max-width: 320px) {
+
+  .host-picture {
+    width: 3rem;
+    border-radius: 100%;
+  }
+
+}
+
+/* End media queries */
 
 /* Start footer codes */
 

@@ -2,7 +2,7 @@ import React from 'react';
 import RedStar from '../assets/images/red-star.png'
 import GreyStar from '../assets/images/grey-star.png'
 
-function ProductRatingTags({ tags, rating }) {
+function ProductHostRating({ rating, host }) {
     const stars = [];
 
     for (let i = 1; i <= 5; i++) {
@@ -12,12 +12,11 @@ function ProductRatingTags({ tags, rating }) {
     }
 
     return (
-        <div className="product-rating-tags">
-            <ul className="product-tags">
-                {tags.map((tag, index) => (
-                    <li key={index} className="product-tag">{tag}</li>
-                ))}
-            </ul>
+        <div className="host-rating">
+            <div className="host-info">
+                <p className="host-name">{host.name}</p>
+                <img src={host.picture} alt={host.name} className="host-picture" />
+            </div>
             <div className="product-rating">
                 {stars}
             </div>
@@ -25,4 +24,4 @@ function ProductRatingTags({ tags, rating }) {
     );
 }
 
-export default ProductRatingTags;
+export default ProductHostRating;

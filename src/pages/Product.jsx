@@ -2,8 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import data from '../logement.json';
 import Slider from '../components/ProductSlider';
-import ProductHostInfo from '../components/ProductHostInfo';
-import ProductRatingTags from '../components/ProductRatingTags';
+import ProductHostRating from '../components/ProductHostRating';
+import ProductTagsInfo from '../components/ProductTagsInfo';
 import ProductDescriptionEquipments from '../components/ProductDescriptionEquipments';
 
 function Product() {
@@ -47,8 +47,10 @@ function Product() {
     return (
         <div className="product-container">
             <Slider images={productData.pictures} currentSlide={currentSlide} nextSlide={nextSlide} prevSlide={prevSlide} />
-            <ProductHostInfo title={productData.title} location={productData.location} host={productData.host} />
-            <ProductRatingTags tags={productData.tags} rating={productData.rating} />
+            <div className="host-rating-tags-info">
+                <ProductHostRating rating={productData.rating} host={productData.host} />
+                <ProductTagsInfo tags={productData.tags} title={productData.title} location={productData.location} />
+            </div>
             <ProductDescriptionEquipments description={productData.description} equipments={productData.equipments} />
         </div>
     );
