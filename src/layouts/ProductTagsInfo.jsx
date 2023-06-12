@@ -1,4 +1,5 @@
 import React from 'react';
+import Tag from '../components/Tag';
 
 function ProductTagsInfo({ tags, title, location }) {
     return (
@@ -9,7 +10,7 @@ function ProductTagsInfo({ tags, title, location }) {
             </div>
             <ul className="product-tags">
                 {tags && tags.map((tag, index) => (
-                    <li key={index} className="product-tag">{tag}</li>
+                    <Tag key={index} tag={tag} />
                 ))}
             </ul>
         </div>

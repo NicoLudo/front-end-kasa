@@ -12,6 +12,15 @@ body {
   min-width: 85%;
 }
 
+/* Start variables */
+
+:root {
+  --primary-color: #FF6060;
+  --secondary-color: #F6F6F6;
+}
+
+/* End variables */
+
 /* Start navbar codes */
 
 nav ul {
@@ -37,29 +46,35 @@ nav {
 
 .nav-items li a {
   text-decoration: none;
-  color: #FF6060;
+  color: var(--primary-color);
 }
 
 .nav-items li a.active {
   text-decoration: underline;
-  color: #FF6060;
+  color: var(--primary-color);
 }
 
 /* End navbar codes */
 
 /* Start page 404 codes */
 
+.page404-container {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
 .page404-title {
   font-size: 10rem;
   text-align: center;
-  color: #FF6060;
+  color: var(--primary-color);
   margin-bottom: 0;
 }
 
 .page404-content {
   font-size: 2rem;
   text-align: center;
-  color: #FF6060;
+  color: var(--primary-color);
 }
 
 .page404-link {
@@ -67,7 +82,7 @@ nav {
 }
 
 .page404-link a {
-  color: #FF6060;
+  color: var(--primary-color);
 }
 
 /* End page 404 codes */
@@ -85,7 +100,7 @@ nav {
 
 .collapse-title {
   position: relative;
-  background-color: #FF6060;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 0.5rem;
   color: #ffffff;
@@ -108,8 +123,8 @@ nav {
 }
 
 .collapse-content {
-  background-color: #F6F6F6;
-  color: #FF6060;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
@@ -165,7 +180,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
-  background-color: #F6F6F6;
+  background-color: var(--secondary-color);
   padding: 3rem;
   border-radius: 1.5rem;
 }
@@ -261,13 +276,13 @@ nav {
 }
 
 .product-title {
-  color: #FF6060;
+  color: var(--primary-color);
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .product-location {
-  color: #FF6060;
+  color: var(--primary-color);
   margin: 5px 5px 0px 0px;
 }
 
@@ -296,7 +311,7 @@ nav {
 }
 
 .host-name {
-  color: #FF6060;
+  color: var(--primary-color);
 }
 
 .host-picture {
@@ -327,7 +342,7 @@ nav {
 
 .product-tag {
   color: #ffffff;
-  background-color: #FF6060;
+  background-color: var(--primary-color);
   padding: 0.2rem 0.8rem 0.2rem 0.8rem;
   font-size: 0.7rem;
   border-radius: 0.5rem;
@@ -366,6 +381,10 @@ nav {
 
   /* Start product page codes */
 
+  .slide-button img {
+    height: 30px;
+  }
+
   .host-rating-tags-info {
     display: flex;
     flex-direction: column-reverse;
@@ -380,6 +399,11 @@ nav {
     flex-direction: row-reverse;
     gap: inherit;
     justify-content: space-between;
+  }
+
+  .host-picture {
+    width: 3rem;
+    border-radius: 100%;
   }
 
   .product-description-equipements {
@@ -398,12 +422,9 @@ nav {
 }
 
 @media (max-width: 320px) {
-
-  .host-picture {
-    width: 3rem;
-    border-radius: 100%;
+  .logo img {
+    height: 2rem;
   }
-
 }
 
 /* End media queries */
